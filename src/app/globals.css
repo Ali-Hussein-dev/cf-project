@@ -6,50 +6,44 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --color-white-100: hsl(206, 5%, 100%);
-    --color-white-200: hsl(206, 5%, 90%);
+  --color-white-200: hsl(206, 5%, 90%);
     --color-white-300: hsl(206, 5%, 80%);
     --color-white-400: hsl(206, 5%, 65%);
     --color-white-500: hsl(206, 5%, 50%);
 
-    --color-black-100: hsl(213, 20%, 12%);
-      --color-black-200: hsl(213, 23%, 8%);
-      --color-black-300: hsl(214, 21%, 6%);
-      --color-black-400: hsl(210, 21%, 6%);
-      --color-black-500: hsl(216, 22%, 4%);
-      --color-black-600: hsl(220, 18%, 3%);
-      --color-black-700: hsl(220, 27%, 2%);
-      --color-black-800: hsl(180, 20%, 1%);
+  --color-black-100: hsl(213, 20%, 12%);
+    --color-black-200: hsl(213, 23%, 8%);
+    --color-black-300: hsl(214, 21%, 6%);
+    --color-black-400: hsl(210, 21%, 6%);
+    --color-black-500: hsl(216, 22%, 4%);
+    --color-black-600: hsl(220, 18%, 3%);
+    --color-black-700: hsl(220, 27%, 2%);
+    --color-black-800: hsl(180, 20%, 1%);
 
-    --color-primary-100: hsl(226, 100%, 97%);
-      --color-primary-200: hsl(226, 100%, 94%);
-      --color-primary-300: hsl(230, 94%, 82%);
-      --color-primary-400: hsl(255, 92%, 76%);
-      --color-primary-500: hsl(239, 84%, 67%);
-      --color-primary-600: hsl(243, 75%, 59%);
-      --color-primary-700: hsl(245, 58%, 51%);
-      --color-primary-800: hsl(244, 55%, 41%);
-      --color-primary-900: hsl(242, 47%, 34%);
+  --color-primary-100: hsl(226, 100%, 97%);
+    --color-primary-200: hsl(226, 100%, 94%);
+    --color-primary-300: hsl(230, 94%, 82%);
+    --color-primary-400: hsl(255, 92%, 76%);
+    --color-primary-500: hsl(239, 84%, 67%);
+    --color-primary-600: hsl(243, 75%, 59%);
+    --color-primary-700: hsl(245, 58%, 51%);
+    --color-primary-800: hsl(244, 55%, 41%);
+    --color-primary-900: hsl(242, 47%, 34%);
 
-    --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-        0 1px 2px 0 rgba(0, 0, 0, 0.06);
-      --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-    list-style-type: none;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    border-width: 0;
+      border-style: solid;
 }
 
 html,
@@ -57,10 +51,10 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-size: 100%;
-    box-sizing: inherit;
-    scroll-behavior: smooth;
-    height: -webkit-fill-available;
-    color: var(--color-white-200);
+  box-sizing: inherit;
+  margin: 0;
+  scroll-behavior: smooth;
+  color: var(--color-white-200);
 }
 
 a,
@@ -78,4 +72,11 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
