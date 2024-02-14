@@ -1,0 +1,211 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  transition: all 0.35s ease;
+  background-color: var(--color-black-800);
+}
+
+.container {
+  max-width: 75rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1.25rem;
+  width: 100%;
+  height: 4.25rem;
+  margin: 0 auto;
+}
+
+.menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 4rem 0 3rem;
+  overflow: hidden;
+  background-color: var(--color-black-300);
+  box-shadow: var(--shadow-medium);
+  transition: all 0.4s ease-in-out;
+
+  &.is-active {
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.25rem;
+    height: 2.4rem;
+  }
+
+  &-link {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-white-100);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    transition-duration: 300ms;
+
+    &:hover {
+      border: 1px solid var(--color-white-400);
+    }
+  }
+
+  &-block {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+    user-select: none;
+    white-space: nowrap;
+    text-align: center;
+    margin-left: auto;
+    padding: 0.65rem 1.5rem;
+    border-radius: 3rem;
+    text-transform: capitalize;
+    color: var(--color-white-100);
+    background-color: var(--color-primary-600);
+    transition: all 0.3s ease-in-out;
+  }
+
+  // Media Query Breakpoint
+  @media only screen and (min-width: 48rem) {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 0rem;
+    margin-left: auto;
+    background: none;
+    box-shadow: none;
+
+    &-inner {
+      display: flex;
+      flex-direction: row;
+      column-gap: 2rem;
+      margin: 0 auto;
+    }
+
+    &-link {
+      text-transform: capitalize;
+    }
+
+    &-block {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  order: -1;
+  z-index: 10;
+  width: 1.6rem;
+  height: 1.15rem;
+  border: none;
+  outline: none;
+  background: none;
+  visibility: visible;
+  transform: rotate(0deg);
+  transition: 0.35s ease;
+
+  // Media Query Breakpoint
+  @media only screen and (min-width: 48rem) {
+    display: none;
+    visibility: hidden;
+  }
+
+  &-line {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    outline: none;
+    opacity: 1;
+    border-radius: 1rem;
+    transform: rotate(0deg);
+    background-color: var(--color-white-100);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      top: 0.5rem;
+      width: 70%;
+    }
+
+    &:nth-child(3) {
+      top: 1rem;
+    }
+  }
+
+  &.is-active .burger-line {
+    &:nth-child(1) {
+      top: 0.5rem;
+      transform: rotate(135deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:nth-child(3) {
+      top: 0.5rem;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.brand {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-primary-600);
+  text-transform: uppercase;
+}
+
+.primary-btn {
+  border-radius: 1.6rem;
+  background: transparent;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition-duration: 300ms;
+  color: var(--color-primary-600);
+  border: 1px solid var(--color-primary-600);
+  &:hover {
+    background: var(--color-primary-600);
+    color: var(--color-white-200);
+  }
+}
