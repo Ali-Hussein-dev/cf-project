@@ -7,7 +7,7 @@
   height: auto;
   margin: 0 auto;
   transition: all 0.35s ease;
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(24px);
   box-shadow: 2rem;
 }
@@ -32,12 +32,12 @@
 
 .menu {
   position: fixed;
-  top: -100%;
+  top: -500%;
   left: 0;
   width: 100%;
   height: auto;
   padding: 4rem 0 3rem;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: var(--color-black-300);
   box-shadow: var(--shadow-medium);
   transition: all 0.4s ease-in-out;
@@ -54,7 +54,6 @@
     justify-content: center;
     align-items: center;
     row-gap: 1.3rem;
-    height: 7rem;
   }
 
   &-link {
@@ -103,10 +102,10 @@
     margin-left: auto;
     background: none;
     box-shadow: none;
-
     &-inner {
       display: flex;
       flex-direction: row;
+      justify-content: end;
       column-gap: 2rem;
       margin: 0 auto;
     }
