@@ -24,7 +24,7 @@
 }
 
 .footer hr {
-  border-top-color: var(--color-white-500);
+  border-top: 1px solid var(--color-white-500);
   opacity: 0.2;
   margin: 0px 1rem;
 }
@@ -42,8 +42,22 @@
   padding: 0.4rem 1rem;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 640px) {
+  .footer-bottom {
+    width: 100%;
+    max-width: 75rem;
+    padding: 0.4rem 1rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .about {
   & > p {
