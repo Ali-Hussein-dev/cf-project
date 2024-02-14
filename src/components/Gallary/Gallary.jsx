@@ -9,7 +9,7 @@ const unsplash = createApi({
 });
 
 //======================================
-export const ImageCard = ({ src, alt, name, description, w, h }) => {
+export const ImageCard = ({ src, alt, name, w, h }) => {
   return (
     <div className={css.card}>
       <Image
@@ -27,7 +27,6 @@ export const ImageCard = ({ src, alt, name, description, w, h }) => {
       />
       <div className={css.body}>
         <h3 className={css.title}>{name}</h3>
-        <p className={css.description}>{description}</p>
       </div>
     </div>
   );
@@ -51,7 +50,6 @@ export const Gallary = () => {
           <ImageCard
             key={i}
             src={image.urls.regular}
-            description={image.description}
             alt={image.title}
             name={image?.user?.name}
             w={image.width}

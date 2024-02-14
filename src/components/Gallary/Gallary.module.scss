@@ -41,16 +41,18 @@
   .body {
     position: absolute;
     bottom: 0;
-    left: 4;
-    padding: 1rem;
+    padding-bottom: 3.7rem;
+    padding-top: 0.1rem;
+    padding-left: 1rem;
     color: var(--color-white-300);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     overflow: hidden;
     transition-duration: 1000ms;
-    transform: translateY(5rem);
+    transform: translateY(4rem);
     transition: transform 0.7s ease-out;
-    max-height: 5rem;
+    height: 3rem;
+    max-height: 4rem;
     width: 100%;
     text-overflow: clip;
     h3 {
