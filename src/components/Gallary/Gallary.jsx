@@ -36,11 +36,11 @@ export const ImageCard = ({ src, alt, name, description, w, h }) => {
 export const Gallary = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    unsplash.photos.list({ page: 5 }).then((result) => {
+    unsplash.photos.getRandom({ count: 15 }).then((result) => {
       if (result.errors) {
         console.log("error occurred: ", result.errors[0]);
       } else {
-        setImages(result.response.results);
+        setImages(result.response);
       }
     });
   }, []);
@@ -62,5 +62,3 @@ export const Gallary = () => {
     </section>
   );
 };
-
-
