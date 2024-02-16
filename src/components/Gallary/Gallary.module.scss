@@ -74,6 +74,10 @@
     column-count: 2;
     column-gap: 1em;
   }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -84,7 +88,7 @@
   }
 
   .card {
-    margin-bottom: 1rem;
+    margin-bottom: 1.7rem;
   }
 }
 
